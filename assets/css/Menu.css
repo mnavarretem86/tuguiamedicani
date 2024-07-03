@@ -1,6 +1,6 @@
 .navbar {
     background-color: #114b5f;
-    padding: 1.0rem;
+    padding: 0.8rem;
     display: flex;
     align-items: center;
 }
@@ -10,7 +10,7 @@
 }
 
 .image {
-    width: 55%;
+    width: 50%;
     height: auto;
 }
 
@@ -31,7 +31,7 @@
 .nav-link {
     text-decoration: none;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
