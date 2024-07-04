@@ -1,87 +1,163 @@
-.navbar {
-    background-color: #114b5f;
-    padding: 0.8rem;
-    display: flex;
-    align-items: center;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
 
-.logo-container {
-    margin-right: auto; /* Esto empuja el logo a la izquierda */
-}
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        background-color: #114b5f;
+    }
 
-.image {
-    width: 50%;
-    height: auto;
-}
+    .logo {
+        max-width: 25rem;
+    }
 
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    flex-grow: 1; /* Esto permite que la lista de navegación ocupe el espacio restante */
-}
+    .nav-list {
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
 
-.nav-item {
-    position: relative;
-    margin: 0 1rem;
-}
+    .nav-list li {
+        position: relative;
+    }
 
-.nav-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    .nav-list li a {
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem 1rem; /* Añadir espaciado interno */
+    }
 
 
-.nav-link .fa-angle-down  {
-    margin-left: 1px; 
-    font-size: 0.9em; 
-    vertical-align: top;
-}
 
-.nav-link:hover {
-    color: #ff6347;
-}
+    .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white; /* Color de fondo del submenú */
+        padding: 1rem;
+        z-index: 1;
+        border-top: 1px solid rgba(0, 0, 0, 0.1); /* Línea de separación en la parte superior del submenú */
+    }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 290px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+    .sub-menu li {
+        margin-bottom: 0.5rem;
+        list-style-type: none; /* Quitar los puntos de lista */
+        white-space: nowrap; /* Evitar que los elementos se dividan en múltiples líneas */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea de separación entre elementos del submenú */
+    }
 
-.dropdown-content li {
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-}
+    .sub-menu li a {
+        color: #666;
+        font-size: 1rem; /* Tamaño de fuente ajustado */
+        padding: 0.5rem 1rem; /* Espaciado interno ajustado */
+        display: block; /* Ajuste para ocupar todo el ancho disponible */
+    }
 
-.dropdown-content li.divider {
-    border-top: .2px solid grey;
-    margin-top: 0;
-}
 
-.dropdown-content .dropdown-link {
-    color: #000;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+    .nav-list li:hover .sub-menu {
+        display: block; /* Mostrar el submenú cuando se hace hover */
 
-.dropdown-content .dropdown-link:hover {
-    background-color: #f1f1f1;
-}
+    }
 
-.nav-item:hover .dropdown-content {
-    display: block;
-}
+    .abrir-menu,
+    .cerrar-menu {
+        display: none;
+    }
+
+    .nav-list li:hover .sub-menu li:hover a {
+        color:rgb(66, 30, 226); /* Cambia el color del texto al pasar el mouse */
+    }
+    
+
+    @media screen and (max-width: 550px) {
+        .abrir-menu,
+        .cerrar-menu {
+            display: block;
+            border: 0;
+            font-size: 1.25rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .abrir-menu {
+            color: white;
+        }
+
+        .cerrar-menu {
+            color: #ececec;
+        }
+
+        .nav {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #114b5f;
+            padding: 2rem;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        }
+
+        .nav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-list {
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .nav-list li {
+            position: relative;
+        }
+
+        .nav-list li:not(:last-child) {
+            padding-bottom: 0.5rem; /* Espaciado en la parte inferior de cada elemento del menú */
+        }
+
+        .nav-list li:hover .sub-menu {
+            display: block; /* Mostrar el submenú cuando se hace hover */
+        }
+
+        .sub-menu {
+            display: none;
+            position: static;
+            background-color: #114b5f;
+            padding: 1rem;
+            z-index: 1;
+        }
+
+        .nav-list li:hover .sub-menu li:hover a {
+            color:rgb(235, 245, 104); /* Cambia el color del texto al pasar el mouse */
+        }
+        .sub-menu li {
+            margin-bottom: 0.5rem;
+            list-style-type: none; /* Quitar los puntos de lista */
+            white-space: nowrap; /* Evitar que los elementos se dividan en múltiples líneas */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea de separación entre elementos del submenú */
+        }
+
+        .sub-menu li a {
+            color: #ececec;
+            font-size: 1rem; /* Tamaño de fuente ajustado */
+            padding: 0.5rem 1rem; /* Espaciado interno ajustado */
+            display: block; /* Ajuste para ocupar todo el ancho disponible */
+        }
+
+        .logo {
+            max-width: 12rem;
+        }
+    }
