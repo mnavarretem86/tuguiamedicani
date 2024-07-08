@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/mnavarretem/public_html/
-    - /bin/rsync -av tuguiamedicani $DEPLOYPATH
+    - /bin/rsync -av /home/mnavarretem/tuguiamedicani/ $DEPLOYPATH
