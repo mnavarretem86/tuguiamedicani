@@ -122,14 +122,71 @@ footer a {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+    }
 
-    footer {
-        padding: 1rem; /* Ajusta el padding del footer en dispositivos móviles */
-    } 
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #114b5f;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li:not(:last-child) {
+        padding-bottom: 0.5rem;
+    }
+
+    .sub-menu {
+        display: none;
+        position: static;
+        background-color: #114b5f;
+        padding: 1rem;
+        z-index: 1;
+    }
+
+    .sub-menu li {
+        margin-bottom: 0.5rem;
+        list-style-type: none;
+        white-space: nowrap;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sub-menu li a {
+        color: #ececec;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        display: block;
+    }
+
+    .logo {
+        max-width: 12rem;
+    }
+
+    /* Opcional: ajustes adicionales según tus necesidades */
 }
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 820px) {
     .abrir-menu,
     .cerrar-menu {
         display: block;
@@ -224,6 +281,44 @@ footer a {
 
     footer {
         padding: 1rem; /* Ajusta el padding del footer en dispositivos móviles */
+    }
+
+}
+ 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    header {
+        padding: 1rem;
+    }
+
+    .logo {
+        max-width: 10rem;
+    }
+
+    .nav-list {
+        gap: 0.5rem;
+    }
+
+    .nav-list li a {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .sub-menu {
+        padding: 0.75rem;
+    }
+
+    .sub-menu li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        
+    }
+
+    .fa-angle-down {
+
+        font-size: 0.50rem;
+    }
+
+    footer {
+        padding: 0.5rem; /* Ajusta el padding del footer en dispositivos móviles */
     }
 
 }
