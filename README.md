@@ -1,1 +1,0 @@
-El proyecto tiene como objetivo principal desarrollar una plataforma web informativa para la Universidad de Managua. Esta página web proporcionará información detallada y actualizada sobre los hospitales y centros especializados en Managua, con el propósito de ayudar a los ciudadanos a encontrar y acceder a servicios de salud de manera más eficiente.
