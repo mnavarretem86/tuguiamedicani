@@ -1,12 +1,11 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('/assets/img/blur-hospital2.jpg');
+    background-image: url('/assets/img/background.jpg');
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f9f9;
 }
 
 .hero {
@@ -15,7 +14,8 @@ body {
     color: white;
     padding: 80px 40px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/Hospital-Fernando-Velez-Paiz.jpg') center/cover no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: center center; /* Centrar la imagen */
 }
 
 .hero img {
@@ -41,11 +41,12 @@ body {
 .specialties, .consultation, .emergency, .contact, .location {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.4); /* Blanco con 90% de opacidad */
     margin: 40px auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 1200px; /* Ancho máximo actual */
+    
 }
 
 .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
@@ -54,17 +55,40 @@ body {
     color: #4CAF50;
 }
 
+.specialties .specialties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.specialties {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blanco con 90% de opacidad */
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ancho máximo actual */
+}
+
+.specialties h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
 .specialty {
-    display: inline-block;
-    background-color: #f4f4f4;
+    flex: 1 1 calc(33% - 20px); /* Esto hace que cada especialidad ocupe aproximadamente un tercio del espacio disponible */
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     max-width: 300px;
+    text-align: left; /* Alineación del texto a la izquierda */
+    
 }
-
+    
 .specialty:hover {
     transform: scale(1.05);
 }
@@ -88,10 +112,23 @@ body {
     margin-top: 20px; /* Espacio entre el mapa y otros elementos */
 }
 
+.reset-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.reset-button:hover {
+    background-color: #45a049;
+}
+
 @media (max-width: 768px) {
-
-
-
     header h1 {
         font-size: 1.0rem;
     }
@@ -109,6 +146,11 @@ body {
 
     .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
         font-size: 1.5rem;
+    }
+
+    .specialties .specialties-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .specialty {

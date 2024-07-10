@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +21,17 @@
 
         <section class="specialties">
             <h2>Especialidades disponibles</h2>
-            <div class="specialty">Pediatría</div>
-            <div class="specialty">Cardiología</div>
-            <div class="specialty">Ginecología</div>
-            <div class="specialty">Dermatología</div>
-            <div class="specialty">Neurología</div>
+            <div class="specialties-container">
+                <div class="specialty"><b>Pediatría:</b> Atención médica especializada para niños y adolescentes, incluyendo neonatología.</div>
+                <div class="specialty"><b>Cardiología:</b> Diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio</div>
+                <div class="specialty"><b>Ginecología y Obstetricia:</b> Servicios de salud reproductiva, cuidado prenatal y parto.</div>
+                <div class="specialty"><b>Dermatología:</b> Diagnóstico y tratamiento de enfermedades de la piel</div>
+                <div class="specialty"><b>Neurología:</b> Atención para trastornos del sistema nervioso.</div>
+                <div class="specialty"><b>Medicina Interna:</b> Diagnóstico y tratamiento de enfermedades en adultos.</div>
+                <div class="specialty"><b>Cardiología:</b> Diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio.</div>
+                <div class="specialty"><b>Otorrinolaringología:</b> Tratamiento de enfermedades del oído, nariz y garganta.</div>
+                <div class="specialty"><b>Nefrología:</b> Tratamiento de enfermedades del riñón.</div>
+            </div>
         </section>
 
         <section class="consultation">
@@ -35,18 +41,18 @@
 
         <section class="emergency">
             <h2>Atención de Emergencia</h2>
-            <p><strong>Horario:</strong> Servicio disponible las 24 horas</p>
+            <p><strong>Horario:</strong> Servicio disponible las 24 horas los 7 dias a la semana</p>
         </section>
 
         <section class="contact">
-            <h2>Contacto</h2>
-            <p>Teléfono: <a href="tel:+50512345678">+505 1234 5678</a></p>
-            <p>Email: <a href="mailto:contacto@hospital.com">contacto@hospital.com</a></p>
+            <h2>Numero de contacto</h2>
+            <p>Teléfono: <a href="tel:+50512345678">+505 2298 0320</a></p>
         </section>
         <section class="location">
             <h2>Ubicación</h2>
             <p class="location-address">Dirección: Del Banco Central de Nicaragua 1 c. arriba, Tierra Prometida</p>
             <div id="map"></div>
+            <button id="reset-marker" class="reset-button">Reubicar Marcador</button>
         </section>
         
     </main>
@@ -56,4 +62,4 @@
     <script defer src="/assets/js/mapsvele.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </body>
-</html> 
+</html>
