@@ -122,6 +122,7 @@ footer a {
     text-decoration: none;
 }
 
+/* Estilos para el menú móvil */
 @media screen and (max-width: 768px) {
     .abrir-menu,
     .cerrar-menu {
@@ -135,13 +136,16 @@ footer a {
         flex-direction: column;
         align-items: end;
         gap: 1rem;
-        position: absolute;
+        position: fixed; /* Cambiado a fixed */
         top: 0;
         right: 0;
-        bottom: 0;
+        width: 80vw; /* Asegúrate de no cubrir toda la pantalla */
+        height: 100vh; /* Asegúrate de cubrir toda la altura */
         background-color: #114b5f;
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 1000; /* Asegúrate de que el z-index sea alto */
+        transition: opacity 0.3s, visibility 0.3s; /* Añadido para una transición más suave */
     }
 
     .nav.visible {
@@ -183,9 +187,8 @@ footer a {
     .logo {
         max-width: 12rem;
     }
-
-    /* Opcional: ajustes adicionales según tus necesidades */
 }
+
 @media screen and (max-width: 820px) {
     .abrir-menu,
     .cerrar-menu {
@@ -211,13 +214,16 @@ footer a {
         flex-direction: column;
         align-items: end;
         gap: 1rem;
-        position: absolute;
+        position: fixed; /* Cambiado a fixed */
         top: 0;
         right: 0;
-        bottom: 0;
+        width: 80vw; /* Asegúrate de no cubrir toda la pantalla */
+        height: 100vh; /* Asegúrate de cubrir toda la altura */
         background-color: #114b5f;
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 1000; /* Asegúrate de que el z-index sea alto */
+        transition: opacity 0.3s, visibility 0.3s; /* Añadido para una transición más suave */
     }
 
     .nav.visible {
@@ -282,9 +288,9 @@ footer a {
     footer {
         padding: 1rem; /* Ajusta el padding del footer en dispositivos móviles */
     }
-
 }
- 
+
+/* Ajustes adicionales para landscape */
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     header {
         padding: 1rem;
@@ -309,16 +315,13 @@ footer a {
     .sub-menu li a {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
-        
     }
 
     .fa-angle-down {
-
         font-size: 0.50rem;
     }
 
     footer {
         padding: 0.5rem; /* Ajusta el padding del footer en dispositivos móviles */
     }
-
 }

@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/assets/img/blur-hospital2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 80px 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/Hospital-Fernando-Velez-Paiz.jpg') center/cover no-repeat;
+    background-size: cover;
+}
+
+.hero img {
+    display: none;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+
+.specialties, .consultation, .emergency, .contact, .location {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ancho máximo actual */
+}
+
+.specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.specialty {
+    display: inline-block;
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 300px;
+}
+
+.specialty:hover {
+    transform: scale(1.05);
+}
+
+.consultation p, .emergency p, .contact p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.location-address {
+    margin-bottom: 20px; /* Espacio entre el párrafo y el mapa */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #555; /* Color de texto */
+}
+
+.location #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio entre el mapa y otros elementos */
+}
+
+@media (max-width: 768px) {
+
+
+
+    header h1 {
+        font-size: 1.0rem;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .specialties, .consultation, .emergency, .contact, .location {
+        padding: 30px;
+    }
+
+    .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
+        font-size: 1.5rem;
+    }
+
+    .specialty {
+        max-width: 100%;
+    }
+
+    .location #map {
+        height: 400px;
+    }
+
+    .location-address {
+        margin-bottom: 20px; /* Espacio entre el párrafo y el mapa */
+        font-size: 1.0rem; /* Tamaño de fuente */
+        color: #555; /* Color de texto */
+    }
+}
