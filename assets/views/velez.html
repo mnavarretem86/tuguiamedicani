@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/vele.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <title>Fernando Vélez Paiz</title>
 </head>
 <body>
     <div id="header-placeholder"></div>
+    <main>
+        <section class="hero">
+            <img src="/assets/img/Hospital-Fernando-Velez-Paiz.jpg" alt="Hero Image">
+            <div class="hero-text">
+                <h2>Hospital Fernando Vélez Paiz</h2>
+                <p>Proveemos atención médica de calidad</p>
+            </div>
+        </section>
 
-    <script defer src="/assets/js/main.js"></script>
+        <section class="specialties">
+            <h2>Especialidades disponibles</h2>
+            <div class="specialty">Pediatría</div>
+            <div class="specialty">Cardiología</div>
+            <div class="specialty">Ginecología</div>
+            <div class="specialty">Dermatología</div>
+            <div class="specialty">Neurología</div>
+        </section>
+
+        <section class="consultation">
+            <h2>Consulta Externa</h2>
+            <p><strong>Horario:</strong> Lunes a Viernes, 7am - 3pm</p>
+        </section>
+
+        <section class="emergency">
+            <h2>Atención de Emergencia</h2>
+            <p><strong>Horario:</strong> Servicio disponible las 24 horas</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>Teléfono: <a href="tel:+50512345678">+505 1234 5678</a></p>
+            <p>Email: <a href="mailto:contacto@hospital.com">contacto@hospital.com</a></p>
+        </section>
+        <section class="location">
+            <h2>Ubicación</h2>
+            <p class="location-address">Dirección: Del Banco Central de Nicaragua 1 c. arriba, Tierra Prometida</p>
+            <div id="map"></div>
+        </section>
+        
+    </main>
+
     <div id="footer-placeholder"></div>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/mapsvele.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </body>
-</html>
+</html> 
