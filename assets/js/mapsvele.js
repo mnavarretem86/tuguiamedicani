@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var map = L.map('map').setView([12.121162322854948, -86.30601807402405], 13);
+    var hospitalLocation = [12.121162322854948, -86.30601807402405];
+    var map = L.map('map').setView(hospitalLocation, 13);
 
     // Definir capas base
     var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,23 +22,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     L.control.layers(baseMaps).addTo(map);
 
-    // Añadir marcador
-    var marker = L.marker([12.121162322854948, -86.30601807402405]).addTo(map)
+    // Añadir marcador del hospital
+    var marker = L.marker(hospitalLocation).addTo(map)
         .bindPopup('Hospital Fernando Vélez Paiz<br><a href="https://www.google.com/maps/dir/?api=1&destination=12.121162322854948,-86.30601807402405" target="_blank">Ir con Google Maps</a><br><a href="https://waze.com/ul?ll=12.121162322854948,-86.30601807402405&navigate=yes" target="_blank">Ir con Waze</a>')
         .openPopup();
 
-    // Función para reubicar el marcador
+    // Función para reubicar el marcador del hospital
     function resetMarker() {
-        map.setView([12.121162322854948, -86.30601807402405], 13);
-        marker.setLatLng([12.121162322854948, -86.30601807402405]);
+        map.setView(hospitalLocation, 13);
+        marker.setLatLng(hospitalLocation);
         marker.openPopup();
     }
 
     // Añadir evento al botón para reubicar el marcador
     document.getElementById('reset-marker').addEventListener('click', resetMarker);
 
-    // Mostrar ubicación del usuario
-    map.locate({setView: true, maxZoom: 16});
+    // Mostrar ubicación del usuario sin centrar el mapa
+    map.locate({setView: false, maxZoom: 4});
 
     function onLocationFound(e) {
         var radius = e.accuracy / 2;
