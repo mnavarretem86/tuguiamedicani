@@ -38,17 +38,18 @@ body {
     font-size: 1.3rem;
 }
 
-.specialties, .consultation, .emergency, .contact, .location, .comments-section {
+.specialties, .consultation, .emergency, .contact, .location {
     padding: 40px 20px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.4); /* Blanco con 40% de opacidad */
+    background-color: rgba(255, 255, 255, 0.4); /* Blanco con 90% de opacidad */
     margin: 40px auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 1200px; /* Ancho máximo */
+    max-width: 1200px; /* Ancho máximo actual */
+    
 }
 
-.specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2, .comments-section h2 {
+.specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
     color: #4CAF50;
@@ -60,8 +61,24 @@ body {
     justify-content: space-between;
 }
 
+.specialties {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blanco con 90% de opacidad */
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ancho máximo actual */
+}
+
+.specialties h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
 .specialty {
-    flex: 1 1 calc(33% - 20px); /* Ocupa aproximadamente un tercio del espacio disponible */
+    flex: 1 1 calc(33% - 20px); /* Esto hace que cada especialidad ocupe aproximadamente un tercio del espacio disponible */
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
@@ -69,8 +86,9 @@ body {
     transition: transform 0.3s;
     max-width: 300px;
     text-align: left; /* Alineación del texto a la izquierda */
+    
 }
-
+    
 .specialty:hover {
     transform: scale(1.05);
 }
@@ -109,46 +127,6 @@ body {
 .reset-button:hover {
     background-color: #45a049;
 }
-
-.comments-section {
-    text-align: left;
-}
-
-.comments-section form {
-    display: flex;
-    flex-direction: column;
-}
-
-.comments-section input, .comments-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.comments-section button {
-    align-self: flex-start;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.comments-section button:hover {
-    background-color: #45a049;
-}
-
-.comments-section #comentarios div {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
 
 @media (max-width: 768px) {
     header h1 {
