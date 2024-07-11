@@ -13,6 +13,8 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
     .then(response => response.text())
     .then(data => {
         alert(data);
+        document.getElementById('nombre').value = ''; // Limpiar el campo nombre
+        document.getElementById('comentario').value = ''; // Limpiar el campo comentario
         cargarComentarios();
     });
 });
@@ -25,10 +27,18 @@ function cargarComentarios() {
         comentariosDiv.innerHTML = '';
         data.forEach(comentario => {
             const comentarioElem = document.createElement('div');
-            comentarioElem.innerText = `${comentario.nombre}: ${comentario.comentario} (${comentario.fecha})`;
+            comentarioElem.innerHTML = `
+                <div class="comment-text">${comentario.nombre}: ${comentario.comentario}</div>
+                <div class="comment-date">${formatFecha(comentario.fecha)}</div>
+            `;
             comentariosDiv.appendChild(comentarioElem);
         });
     });
+}
+
+function formatFecha(fechaString) {
+    const fecha = new Date(fechaString);
+    return fecha.toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' });
 }
 
 cargarComentarios();
