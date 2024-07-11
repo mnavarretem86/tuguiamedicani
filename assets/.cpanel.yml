@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tuguttrg/public_html/
+    - /bin/cp /home/tuguttrg/repositories/tuguiamedicani/index.html $DEPLOYPATH
+    - /bin/cp -R /home/tuguttrg/repositories/tuguiamedicani/assets $DEPLOYPATH
