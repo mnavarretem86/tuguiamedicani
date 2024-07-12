@@ -2,13 +2,14 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
     const comentario = document.getElementById('comentario').value;
+    const vista = document.querySelector('main').getAttribute('data-vista');
 
     fetch('https://tuguiamedicani.com/comentarios', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre, comentario })
+        body: JSON.stringify({ nombre, comentario, vista })
     })
     .then(response => response.text())
     .then(data => {
@@ -20,7 +21,8 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
 });
 
 function cargarComentarios() {
-    fetch('https://tuguiamedicani.com/comentarios')
+    const vista = document.querySelector('main').getAttribute('data-vista');
+    fetch(`https://tuguiamedicani.com/comentarios?vista=${vista}`)
     .then(response => response.json())
     .then(data => {
         const comentariosDiv = document.getElementById('comentarios');
