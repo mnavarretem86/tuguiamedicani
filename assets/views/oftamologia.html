@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/vele.css">
+    <link rel="stylesheet" href="/assets/css/oftamologia.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <title>Fernando Vélez Paiz</title>
 </head>
 <body>
     <div id="header-placeholder"></div>
-    <main>
+    <main data-vista="Oftalmologia">
         <section class="hero">
-            <img src="/assets/img/Hospital-Fernando-Velez-Paiz.jpg" alt="Hero Image">
+            <img src="/assets/img//344076.webp" alt="oftamologia">
             <div class="hero-text">
-                <h2>Hospital Fernando Vélez Paiz</h2>
-                <p>Proveemos atención médica de calidad</p>
+                <h2>Centro Nacional de Oftalmología</h2>
+                <p>Salud en familia y comunidad</p>
             </div>
         </section>
 
-        <section class="specialties">
+        <!-- <section class="specialties">
             <h2>Especialidades disponibles</h2>
             <div class="specialties-container">
                 <div class="specialty"><b>Pediatría:</b> Atención médica especializada para niños y adolescentes, incluyendo neonatología.</div>
@@ -37,29 +37,40 @@
         <section class="consultation">
             <h2>Consulta Externa</h2>
             <p><strong>Horario:</strong> Lunes a Viernes, 7am - 3pm</p>
-        </section>
+        </section> -->
 
         <section class="emergency">
-            <h2>Atención de Emergencia</h2>
+            <h2>Atención</h2>
             <p><strong>Horario:</strong> Servicio disponible las 24 horas los 7 dias a la semana</p>
         </section>
 
         <section class="contact">
             <h2>Numero de contacto</h2>
-            <p>Teléfono: <a href="tel:+50512345678">+505 2298 0320</a></p>
+            <p>Teléfono: <a href="tel:+50512345678">+505 2222 2306</a></p>
         </section>
+
         <section class="location">
             <h2>Ubicación</h2>
-            <p class="location-address">Dirección: Del Banco Central de Nicaragua 1 c. arriba, Tierra Prometida</p>
+            <p class="location-address"><B>Dirección:</B>Frente al cementerio San Pedro, Boer </p>
             <div id="map"></div>
-            <button id="reset-marker" class="reset-button">Ubicar Hospital</button>
+            <button id="reset-marker" class="reset-button">Ubicar Centro</button>
         </section>
-        
+
+        <section class="comments-section">
+            <h2>Comentarios</h2>
+            <form id="comentarioForm">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <textarea id="comentario" placeholder="Tu comentario" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="comentarios"></div>
+        </section>        
     </main>
 
     <div id="footer-placeholder"></div>
     <script defer src="/assets/js/main.js"></script>
-    <script defer src="/assets/js/mapsvele.js"></script>
+    <script defer src="/assets/js/oftamologia.js"></script>
+    <script defer src="/assets/js/comentarios.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </body>
 </html>
