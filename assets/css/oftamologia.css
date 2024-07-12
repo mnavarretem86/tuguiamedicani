@@ -107,7 +107,7 @@ body {
 }
 
 .reset-button:hover {
-    background-color: #4561df;
+    background-color: #3148af;
 }
 .comments-section {
     text-align: left;
@@ -142,7 +142,8 @@ body {
 }
 
 .comments-section button:hover {
-    background-color: #4561df;
+    background-color: #3148af;
+
 }
 
 .comments-section #comentarios {
