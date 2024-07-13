@@ -5,3 +5,5 @@ deployment:
     - /bin/cp -R /home/tuguttrg/repositories/tuguiamedicani/assets $DEPLOYPATH/
     - /bin/sed -i 's#<li><a href="/assets/views/Acercade.html">Acerca de Nosotros</a></li>#<li><a href="Acercade.html">Acerca de Nosotros</a></li>#g' $DEPLOYPATH/assets/views/header.html
     - /bin/sed -i 's#<li><a href="/assets/views/velez.html">Fernando Vélez Paiz</a></li>#<li><a href="velez.html">Fernando Vélez Paiz</a></li>#g' $DEPLOYPATH/assets/views/header.html
+    - /bin/sed -i 's#<li><a href="/assets/views/contacto.html">Contacto</a></li>#<li><a href="contacto.html">Contacto</a></li>#g' $DEPLOYPATH/assets/views/header.html
+    - /bin/sed -i 's#<li><a href="/assets/views/oftamologia.html">Centro Oftalmología</a></li>#<li><a href="oftamologia.html">Centro Oftalmología</a></li>#g' $DEPLOYPATH/assets/views/header.html
