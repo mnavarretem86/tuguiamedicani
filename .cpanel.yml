@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/tuguttrg/public_html/
     - /bin/cp /home/tuguttrg/repositories/tuguiamedicani/index.html $DEPLOYPATH
     - /bin/cp -R /home/tuguttrg/repositories/tuguiamedicani/assets $DEPLOYPATH
+    - /bin/sed 's#<li><a href="/assets/views/Acercade.html">Acerca de Nosotros</a></li>#<li><a href="Acercade.html">Acerca de Nosotros</a></li>#g' /home/tuguttrg/public_html/assets/views/header.html
