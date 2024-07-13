@@ -51,8 +51,7 @@ body {
 .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2, .comments-section h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #894caf;
-    /* color: #4CAF50; */
+    color: #4CAF50;
 }
 
 .specialties .specialties-container {
