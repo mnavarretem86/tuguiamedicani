@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+//document.addEventListener("DOMContentLoaded", function() 
+    
     // Fetch and insert header
     fetch('/assets/views/header.html')
         .then(response => response.text())
@@ -28,4 +29,4 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Error fetching header or footer:', error);
         });
-});
+//});
