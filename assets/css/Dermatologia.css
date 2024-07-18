@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/assets/img/background.webp');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 80px 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/centrooftamologia.webp') center/cover no-repeat;
+    background-size: 100%;
+    background-position: center center; /* Centrar la imagen */
+}
+
+.hero img {
+    display: none;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+
+.specialties, .consultation, .emergency, .contact, .location, .comments-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4); /* Blanco con 40% de opacidad */
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Ancho máximo */
+}
+
+.specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2, .comments-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4561df;
+}
+
+.specialties .specialties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.specialty {
+    flex: 1 1 calc(33% - 20px); /* Ocupa aproximadamente un tercio del espacio disponible */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 300px;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.specialty:hover {
+    transform: scale(1.05);
+}
+
+.consultation p, .emergency p, .contact p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.location-address {
+    margin-bottom: 20px; /* Espacio entre el párrafo y el mapa */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #555; /* Color de texto */
+}
+
+.location #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio entre el mapa y otros elementos */
+}
+
+.reset-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4561df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.reset-button:hover {
+    background-color: #3148af;
+}
+.comments-section {
+    text-align: left;
+}
+
+.comments-section form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Añadimos margen inferior al formulario */
+}
+
+.comments-section input, .comments-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.comments-section button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #4561df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px; /* Aumentamos el margen superior del botón */
+    margin-bottom: 10px; /* Reducimos el margen inferior del botón */
+}
+
+.comments-section button:hover {
+    background-color: #3148af;
+
+}
+
+.comments-section #comentarios {
+    margin-top: 20px; /* Aumentamos el margen superior de la sección de comentarios */
+}
+
+.comments-section #comentarios div {
+    margin-bottom: 20px; /* Aumentamos el espacio entre comentarios */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.comments-section #comentarios .comment-text {
+    margin-bottom: 5px;
+}
+
+.comments-section .comment-date {
+    font-size: 0.9rem;
+    color: #999;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.0rem;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .specialties, .consultation, .emergency, .contact, .location {
+        padding: 30px;
+    }
+
+    .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2 {
+        font-size: 1.5rem;
+    }
+
+    .specialties .specialties-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .specialty {
+        max-width: 100%;
+    }
+
+    .location #map {
+        height: 400px;
+    }
+
+    .location-address {
+        margin-bottom: 20px; /* Espacio entre el párrafo y el mapa */
+        font-size: 1.0rem; /* Tamaño de fuente */
+        color: #555; /* Color de texto */
+    }
+
+    .comments-section h2 {
+
+        font-size: 1.5rem;
+
+
+    }
+
+}

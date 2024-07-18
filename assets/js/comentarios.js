@@ -4,6 +4,8 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
     const comentario = document.getElementById('comentario').value;
     const vista = document.querySelector('main').getAttribute('data-vista');
 
+
+
     fetch('https://tuguiamedicani.com/comentarios', {
         method: 'POST',
         headers: {
@@ -19,6 +21,8 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
         cargarComentarios();
     });
 });
+
+
 
 function cargarComentarios() {
     const vista = document.querySelector('main').getAttribute('data-vista');
@@ -37,6 +41,8 @@ function cargarComentarios() {
         });
     });
 }
+
+
 
 function formatFecha(fechaString) {
     const fecha = new Date(fechaString);
