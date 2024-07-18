@@ -13,7 +13,7 @@ body {
     text-align: center;
     color: white;
     padding: 80px 40px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/centrooftamologia.webp') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/dermatologico.webp') center/cover no-repeat;
     background-size: 100%;
     background-position: center center; /* Centrar la imagen */
 }
@@ -51,7 +51,7 @@ body {
 .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2, .comments-section h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #4561df;
+    color: #ce682e;
 }
 
 .specialties .specialties-container {
@@ -98,7 +98,7 @@ body {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4561df;
+    background-color: #ce682e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -131,7 +131,7 @@ body {
 .comments-section button {
     align-self: flex-start;
     padding: 10px 20px;
-    background-color: #4561df;
+    background-color: #ce682e;
     color: white;
     border: none;
     border-radius: 5px;
