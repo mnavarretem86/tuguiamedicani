@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/mascota.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>a Mascota</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main data-vista="FernandoVelezPaiz">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Hospital Infantil Manuel de Jesús Rivera "La Mascota"</h2>
+                <p>Proveemos atención médica de calidad</p>
+            </div>
+        </section>
+
+        <section class="specialties">
+            <h2>Especialidades disponibles</h2>
+            <div class="specialties-container">
+                <div class="specialty"><b>Pediatría:</b> Atención médica especializada para niños y adolescentes, incluyendo neonatología.</div>
+                <div class="specialty"><b>Cardiología:</b> Diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio</div>
+                <div class="specialty"><b>Ginecología y Obstetricia:</b> Servicios de salud reproductiva, cuidado prenatal y parto.</div>
+                <div class="specialty"><b>Dermatología:</b> Diagnóstico y tratamiento de enfermedades de la piel</div>
+                <div class="specialty"><b>Neurología:</b> Atención para trastornos del sistema nervioso.</div>
+                <div class="specialty"><b>Medicina Interna:</b> Diagnóstico y tratamiento de enfermedades en adultos.</div>
+                <div class="specialty"><b>Cardiología:</b> Diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio.</div>
+                <div class="specialty"><b>Otorrinolaringología:</b> Tratamiento de enfermedades del oído, nariz y garganta.</div>
+                <div class="specialty"><b>Nefrología:</b> Tratamiento de enfermedades del riñón.</div>
+            </div>
+        </section>
+
+        <section class="consultation">
+            <h2>Consulta Externa</h2>
+            <p><strong>Horario:</strong> Lunes a Viernes, 7am - 3pm</p>
+        </section>
+
+        <section class="emergency">
+            <h2>Atención de Emergencia</h2>
+            <p><strong>Horario:</strong> Servicio disponible las 24 horas los 7 dias a la semana</p>
+        </section>
+
+        <section class="contact">
+            <h2>Numero de contacto</h2>
+            <p>Teléfono: <a href="tel:+5052298 0320">+505 2298 0320</a></p>
+        </section>
+
+        <section class="location">
+            <h2>Ubicación</h2>
+            <p class="location-address">Dirección: Del Banco Central de Nicaragua 1 c. arriba, Tierra Prometida</p>
+            <div id="map"></div>
+            <button id="reset-marker" class="reset-button">Ubicar Hospital</button>
+        </section>
+
+        <section class="comments-section">
+            <h2>Comentarios</h2>
+            <form id="comentarioForm">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <textarea id="comentario" placeholder="Tu comentario" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="comentarios"></div>
+        </section>        
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/mascota.js"></script>
+    <script defer src="/assets/js/comentarios.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>
