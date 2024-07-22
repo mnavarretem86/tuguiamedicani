@@ -1,7 +1,7 @@
 //document.addEventListener("DOMContentLoaded", function() 
     
     // Fetch and insert header
-    fetch('/assets/views/header.html')
+    fetch('/assets/views/menu.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
@@ -27,6 +27,6 @@
             });
         })
         .catch(error => {
-            console.error('Error fetching header or footer:', error);
+            console.error('Error fetching menu or footer:', error);
         });
 //});

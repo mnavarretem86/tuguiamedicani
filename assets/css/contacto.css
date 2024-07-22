@@ -3,11 +3,18 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
+    background-color: #f9f9f9; /* Fondo suave para contraste */
+    border-radius: 8px; /* Bordes redondeados para un diseño más amigable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
 }
 
 .contacto h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 600;
+    color: green;
 }
 
 .contacto p {
@@ -15,7 +22,7 @@
     line-height: 1.8;
     letter-spacing: 0.5px;
     font-size: 1.1em;
-    color: #0a0a0a;
+    color: #333; /* Ajuste de color para mayor contraste */
 }
 
 .image-container {
@@ -24,8 +31,10 @@
 }
 
 .image-container img {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
+    border-radius: 8px; /* Bordes redondeados para un diseño más cohesivo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para imágenes */
 }
 
 /* Estilos responsivos */
@@ -34,14 +43,18 @@
         padding: 10px;
     }
 
-    .contacto p {
-        line-height: 1.2;
-        letter-spacing: 0.2px;
-        font-size: 0.9em;
-        color: #0a0a0a;
+    .contacto h1 {
+        font-size: 1.5em; /* Tamaño de fuente ajustado para dispositivos móviles */
     }
 
-    .footer-content {
-        padding: 10px;
+    .contacto p {
+        line-height: 1.4;
+        letter-spacing: 0.3px;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .image-container img {
+        max-width: 55%; /* Ajuste de tamaño de imagen para dispositivos móviles */
     }
 }
