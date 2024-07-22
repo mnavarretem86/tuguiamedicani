@@ -1,85 +1,47 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    max-width: 90%;
-    margin: 20px auto;
+.contacto {
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
-.contact-us {
+.contacto h1 {
     text-align: center;
-    padding: 20px;
+    color: #333;
 }
 
-.contact-us h1 {
-    font-size: 2.5em; /* Tamaño grande */
-    color: #007bff; /* Color azul acorde */
-    margin-bottom: 10px;
+.contacto p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    font-size: 1.1em;
+    color: #0a0a0a;
 }
 
-.contact-us p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 20px;
+.image-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.contact-us a {
-    color: #007bff;
-    text-decoration: none;
+.image-container img {
+    max-width: 50%;
+    height: auto;
 }
 
-.contact-us a:hover {
-    text-decoration: underline;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: calc(100% - 20px);
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1em;
-}
-
-textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 600px) {
-    main {
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contacto {
         padding: 10px;
     }
 
-    .contact-us h1 {
-        font-size: 2em; /* Tamaño un poco más pequeño */
-        margin-bottom: 8px;
-    }
-
-    .contact-us p {
+    .contacto p {
+        line-height: 1.2;
+        letter-spacing: 0.2px;
         font-size: 0.9em;
-        margin-bottom: 16px;
+        color: #0a0a0a;
     }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        width: calc(100% - 16px);
+    .footer-content {
         padding: 10px;
-        margin-bottom: 8px;
-        font-size: 0.9em;
     }
 }
