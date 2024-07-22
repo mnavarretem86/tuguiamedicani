@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let hospitalLocation = [12.12509248146829, -86.23649794601968];
+    let hospitalLocation = [12.135795779411104,-86.28033936031035];
     let map = L.map('map').setView(hospitalLocation, 13);
 
-  
     // Definir capas base
     let osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Añadir marcador del hospital
     let marker = L.marker(hospitalLocation).addTo(map)
-        .bindPopup('Hospital "La Mascota" <br><a href="https://www.google.com/maps/dir/?api=1&destination=12.12509248146829,-86.23649794601968" target="_blank">Ir con Google Maps</a><br><a href="https://waze.com/ul?ll=12.147682835239348,-86.29887787617419&navigate=yes" target="_blank">Ir con Waze</a>')
+        .bindPopup('Medicina Natural para el Adulto Mayor <br><a href="https://www.google.com/maps/dir/?api=1&destination=12.135795779411104,-86.28033936031035" target="_blank">Ir con Google Maps</a><br><a href="https://waze.com/ul?ll=12.135795779411104,-86.28033936031035&navigate=yes" target="_blank">Ir con Waze</a>')
         .openPopup();
 
     // Función para reubicar el marcador del hospital
