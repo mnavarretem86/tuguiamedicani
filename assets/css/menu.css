@@ -39,6 +39,11 @@ header {
     color: #ececec;
 }
 
+.icon {
+    position: relative;
+    top: -5px;
+}
+
 .sub-menu {
     display: block;
     position: absolute;
@@ -105,7 +110,7 @@ header {
 
 /* Estilo para el footer */
 footer {
-    background-color: rgba(17, 75, 95, 0.7);
+    background-color: rgba(17, 75, 95);
     color: #fff;
     padding: 1rem 2rem;
     text-align: center;
@@ -247,6 +252,7 @@ footer a {
     .nav-list li:hover .sub-menu {
         display: block;
     }
+
 
     .sub-menu {
         display: none;

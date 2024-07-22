@@ -58,6 +58,12 @@ body {
     color: #0a0a0a;
 }
 
+.icon {
+    position: relative;
+    top: -2px; /* Adjust the value as needed */
+}
+
+
 @media (max-width: 820px) {
     .content-wrapper {
         flex-direction: column;
