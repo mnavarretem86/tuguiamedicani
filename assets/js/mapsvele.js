@@ -1,29 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var hospitalLocation = [12.121162322854948, -86.30601807402405];
-    var map = L.map('map').setView(hospitalLocation, 13);
+    let hospitalLocation = [12.121162322854948, -86.30601807402405];
+    let map = L.map('map').setView(hospitalLocation, 13);
 
-    // Definir capas base
-    var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    
+    // Definir capa base
+    let osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
-
-  /*   var satelliteLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.opentopomap.org/copyright">OpenTopoMap</a> contributors'
-    }); */
 
     // Añadir capa base por defecto
     osmLayer.addTo(map);
 
-    // Añadir control de capas
-    var baseMaps = {
-        "OpenStreetMap": osmLayer,
-        "Satellite": satelliteLayer
+    // El control de capas se ha eliminado
+    /*
+    let baseMaps = {
+        "OpenStreetMap": osmLayer
+        // "Satellite": satelliteLayer  // Comentado para quitar la capa de satélite
     };
 
     L.control.layers(baseMaps).addTo(map);
+    */
 
     // Añadir marcador del hospital
-    var marker = L.marker(hospitalLocation).addTo(map)
+    let marker = L.marker(hospitalLocation).addTo(map)
         .bindPopup('Hospital Fernando Vélez Paiz<br><a href="https://www.google.com/maps/dir/?api=1&destination=12.121162322854948,-86.30601807402405" target="_blank">Ir con Google Maps</a><br><a href="https://waze.com/ul?ll=12.121162322854948,-86.30601807402405&navigate=yes" target="_blank">Ir con Waze</a>')
         .openPopup();
 
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     map.locate({setView: false, maxZoom: 4});
 
     function onLocationFound(e) {
-        var radius = e.accuracy / 2;
+        let radius = e.accuracy / 2;
 
         L.marker(e.latlng).addTo(map)
             .bindPopup("Estás dentro de " + radius + " metros desde este punto").openPopup();
