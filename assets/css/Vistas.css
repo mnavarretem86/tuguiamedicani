@@ -102,7 +102,7 @@ body {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #388E3C; /* Color de fondo mejorado */
+    background-color: #3e3f8f; /* Color de fondo mejorado */
     color: white;             /* Color de texto */
     border: none;
     border-radius: 5px;
@@ -111,7 +111,7 @@ body {
 }
 
 .reset-button:hover, .comments-section button:hover {
-    background-color: #2E7D32; /* Color de fondo más oscuro para el estado hover */
+    background-color: #5153d1; /* Color de fondo más oscuro para el estado hover */
 }
 
 .comments-section {
@@ -134,20 +134,19 @@ body {
 }
 
 .comments-section button {
-    align-self: flex-start;
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #388E3C; /* Color de fondo mejorado */
-    color: white;              /* Color de texto */
+    background-color: #3e3f8f; /* Color de fondo con mejor contraste */
+    color: #FFFFFF; /* Color de texto blanco */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin-top: 20px; 
-    margin-bottom: 10px; 
 }
 
 .comments-section button:hover {
-    background-color: #2E7D32; /* Color de fondo más oscuro para el estado hover */
+    background-color: #5153d1; /* Color de fondo más oscuro para el estado hover */
 }
 
 .comments-section #comentarios {
@@ -172,6 +171,8 @@ body {
     bottom: 0;
     right: 0;
 }
+
+
 
 @media (max-width: 768px) {
     header h1 {

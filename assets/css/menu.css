@@ -14,7 +14,9 @@ header {
 }
 
 .logo {
-    max-width: 25rem;
+    max-width: 25rem;   
+    width: 100%; /* Asegurando que el logo escale correctamente */
+    height: auto; /* Manteniendo la proporción del logo */
 }
 
 .nav-list {
