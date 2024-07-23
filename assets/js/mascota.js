@@ -14,15 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Añadir capa base por defecto
     osmLayer.addTo(map);
-    let satelliteLayer 
 
     // Añadir control de capas
-    let baseMaps = {
+   /*  let baseMaps = {
         "OpenStreetMap": osmLayer,
         "Satellite": satelliteLayer
-    };
+    }; */
 
-    L.control.layers(baseMaps).addTo(map);
+/*     L.control.layers(baseMaps).addTo(map); */
 
     // Añadir marcador del hospital
     let marker = L.marker(hospitalLocation).addTo(map)
