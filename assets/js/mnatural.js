@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
-    let satelliteLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+  /*   let satelliteLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.opentopomap.org/copyright">OpenTopoMap</a> contributors'
     });
-
+ */
     // Añadir capa base por defecto
     osmLayer.addTo(map);
-
+    let satelliteLayer 
     // Añadir control de capas
     let baseMaps = {
         "OpenStreetMap": osmLayer,

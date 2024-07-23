@@ -5,13 +5,13 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #333; /* Color de texto general */
 }
 
 .hero {
     position: relative;
     text-align: center;
-    color: white;
+    color: white; /* Asegurando el contraste con la imagen de fondo */
     padding: 80px 40px;
 }
 
@@ -23,9 +23,8 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    filter: brightness(50%); /* Oscurece la imagen */
+    filter: brightness(40%); /* Oscurece la imagen para mejorar el contraste */
 }
-
 
 .hero-text {
     position: relative;
@@ -42,10 +41,11 @@ body {
 .hero-text p {
     font-size: 1.3rem;
 }
+
 .specialties, .consultation, .emergency, .contact, .location, .comments-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.4); /* Blanco con 40% de opacidad */
+    background-color: rgba(255, 255, 255, 0.8); /* Incrementar opacidad para mejorar el contraste */
     margin: 40px auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -55,8 +55,7 @@ body {
 .specialties h2, .consultation h2, .emergency h2, .contact h2, .location h2, .comments-section h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #4c68af;
-    /*color: #4CAF50;*/
+    color: #2E7D32; /* Usar un color con buen contraste */
 }
 
 .specialties .specialties-container {
@@ -66,14 +65,14 @@ body {
 }
 
 .specialty {
-    flex: 1 1 calc(33% - 20px); /* Ocupa aproximadamente un tercio del espacio disponible */
+    flex: 1 1 calc(33% - 20px); 
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     max-width: 300px;
-    text-align: left; /* Alineación del texto a la izquierda */
+    text-align: left;
 }
 
 .specialty:hover {
@@ -86,9 +85,9 @@ body {
 }
 
 .location-address {
-    margin-bottom: 20px; /* Espacio entre el párrafo y el mapa */
-    font-size: 1.2rem; /* Tamaño de fuente */
-    color: #555; /* Color de texto */
+    margin-bottom: 20px; 
+    font-size: 1.2rem;
+    color: #333; /* Asegurando buen contraste */
 }
 
 .location #map {
@@ -96,24 +95,25 @@ body {
     height: 500px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Espacio entre el mapa y otros elementos */
+    margin-top: 20px; 
 }
 
-.reset-button {
+.reset-button, .comments-section button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #3e3f8f; /* Color de fondo mejorado */
+    color: white;             /* Color de texto */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
 }
 
-.reset-button:hover {
-    background-color: #45a049;
+.reset-button:hover, .comments-section button:hover {
+    background-color: #5153d1; /* Color de fondo más oscuro para el estado hover */
 }
+
 .comments-section {
     text-align: left;
 }
@@ -121,7 +121,7 @@ body {
 .comments-section form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Añadimos margen inferior al formulario */
+    margin-bottom: 20px; 
 }
 
 .comments-section input, .comments-section textarea {
@@ -134,28 +134,27 @@ body {
 }
 
 .comments-section button {
-    align-self: flex-start;
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #3e3f8f; /* Color de fondo con mejor contraste */
+    color: #FFFFFF; /* Color de texto blanco */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin-top: 20px; /* Aumentamos el margen superior del botón */
-    margin-bottom: 10px; /* Reducimos el margen inferior del botón */
 }
 
 .comments-section button:hover {
-    background-color: #45a049;
+    background-color: #5153d1; /* Color de fondo más oscuro para el estado hover */
 }
 
 .comments-section #comentarios {
-    margin-top: 20px; /* Aumentamos el margen superior de la sección de comentarios */
+    margin-top: 20px; 
 }
 
 .comments-section #comentarios div {
-    margin-bottom: 20px; /* Aumentamos el espacio entre comentarios */
+    margin-bottom: 20px; 
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
     position: relative;
@@ -173,10 +172,13 @@ body {
     right: 0;
 }
 
+
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.0rem;
     }
+
     .hero-text h2 {
         font-size: 1.5rem;
     }
@@ -203,7 +205,7 @@ body {
     }
 
     .location #map {
-        height: 400px;
+        height: 300px;
     }
 
     .location-address {
