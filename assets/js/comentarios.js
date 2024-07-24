@@ -1,3 +1,5 @@
+// Archivo: /assets/js/comentarios.js
+
 document.getElementById('comentarioForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
@@ -18,13 +20,13 @@ document.getElementById('comentarioForm').addEventListener('submit', function(ev
         return response.text();
     })
     .then(data => {
-        alert(data);
+        showMessage('Comentario Enviado', 'success');
         document.getElementById('nombre').value = ''; // Limpiar el campo nombre
         document.getElementById('comentario').value = ''; // Limpiar el campo comentario
         cargarComentarios();
     })
     .catch(error => {
-        alert(error.message);
+        showMessage(error.message, 'error');
     });
 });
 
@@ -50,13 +52,27 @@ function cargarComentarios() {
         });
     })
     .catch(error => {
-        alert(error.message);
+        showMessage(error.message, 'error');
     });
 }
 
 function formatFecha(fechaString) {
     const fecha = new Date(fechaString);
     return fecha.toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' });
+}
+
+function showMessage(message, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message message-${type}`;
+    messageDiv.textContent = message;
+
+    // Añadir el mensaje al cuerpo del documento
+    document.body.appendChild(messageDiv);
+
+    // Quitar el mensaje después de 5 segundos
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
 }
 
 cargarComentarios();
