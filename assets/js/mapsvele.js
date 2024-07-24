@@ -2,24 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let hospitalLocation = [12.121162322854948, -86.30601807402405];
     let map = L.map('map').setView(hospitalLocation, 13);
 
-    
     // Definir capa base
     let osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
+
     // Añadir capa base por defecto
     osmLayer.addTo(map);
 
-    // El control de capas se ha eliminado
-    /*
-    let baseMaps = {
-        "OpenStreetMap": osmLayer
-        // "Satellite": satelliteLayer  // Comentado para quitar la capa de satélite
-    };
-
-    L.control.layers(baseMaps).addTo(map);
-    */
 
     // Añadir marcador del hospital
     let marker = L.marker(hospitalLocation).addTo(map)
@@ -36,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Añadir evento al botón para reubicar el marcador
     document.getElementById('reset-marker').addEventListener('click', resetMarker);
 
+    
     // Mostrar ubicación del usuario sin centrar el mapa
     map.locate({setView: false, maxZoom: 4});
 
@@ -48,10 +40,25 @@ document.addEventListener('DOMContentLoaded', function () {
         L.circle(e.latlng, radius).addTo(map);
     }
 
+        //Funcion de error
     function onLocationError(e) {
-        alert(e.message);
+        showMessage('No pudimos obtener tu ubicación. Por favor, habilita la geolocalización y recarga la página.', 'error');
     }
 
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 });
+
+function showMessage(message, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message message-${type}`;
+    messageDiv.textContent = message;
+
+    // Añadir el mensaje al cuerpo del documento
+    document.body.appendChild(messageDiv);
+
+    // Quitar el mensaje después de 5 segundos
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}

@@ -7,20 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
-/*     var satelliteLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.opentopomap.org/copyright">OpenTopoMap</a> contributors'
-    });
- */
+
     // Añadir capa base por defecto
     osmLayer.addTo(map);
 
-    // Añadir control de capas
- /*    var baseMaps = {
-        "OpenStreetMap": osmLayer,
-        "Satellite": satelliteLayer
-    }; */
-
-/*     L.control.layers(baseMaps).addTo(map); */
 
     // Añadir marcador del hospital
     var marker = L.marker(hospitalLocation).addTo(map)
@@ -49,10 +39,25 @@ document.addEventListener('DOMContentLoaded', function () {
         L.circle(e.latlng, radius).addTo(map);
     }
 
-    function onLocationError(e) {
-        alert(e.message);
-    }
+   //Funcion de error
+   function onLocationError(e) {
+    showMessage('No pudimos obtener tu ubicación. Por favor, habilita la geolocalización y recarga la página.', 'error');
+}
 
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 });
+
+function showMessage(message, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message message-${type}`;
+    messageDiv.textContent = message;
+
+    // Añadir el mensaje al cuerpo del documento
+    document.body.appendChild(messageDiv);
+
+    // Quitar el mensaje después de 5 segundos
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}
