@@ -110,25 +110,42 @@ header {
     display: none;
 }
 
-/* Estilo para el footer */
 footer {
-    background-color: rgba(17, 75, 95);
+    background-color: rgba(17, 75, 95, 1);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem; /* Aumentar el padding para un mejor espaciado */
     text-align: center;
     width: 100%;
     flex-shrink: 0; /* Evita que el footer se encoja */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Añadir una sombra para darle profundidad */
+    border-top: 3px solid #ccc; /* Añadir un borde superior */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrando el contenido del footer */
 }
 
 footer p {
     margin: 0.5rem 0;
+    font-size: 1rem; /* Ajustar el tamaño de fuente para mejor legibilidad */
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold; /* Hacer los enlaces más destacados */
 }
 
+footer a:hover {
+    text-decoration: underline; /* Añadir subrayado al pasar el ratón */
+}
+
+.version {
+    font-size: 0.9rem;
+    color: #ccc; /* Cambiar el color para que sea menos prominente */
+    margin-top: 1rem; /* Añadir margen superior */
+}
 /* Estilos para el menú móvil */
 @media screen and (max-width: 768px) {
     .abrir-menu,
