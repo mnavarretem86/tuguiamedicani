@@ -1,5 +1,3 @@
-// Archivo: /assets/js/mapsvele.js
-
 document.addEventListener('DOMContentLoaded', function () {
     let hospitalLocation = [12.121162322854948, -86.30601807402405];
     let map = L.map('map').setView(hospitalLocation, 13);
@@ -9,18 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
+
     // Añadir capa base por defecto
     osmLayer.addTo(map);
 
-    // El control de capas se ha eliminado
-    /*
-    let baseMaps = {
-        "OpenStreetMap": osmLayer
-        // "Satellite": satelliteLayer  // Comentado para quitar la capa de satélite
-    };
-
-    L.control.layers(baseMaps).addTo(map);
-    */
 
     // Añadir marcador del hospital
     let marker = L.marker(hospitalLocation).addTo(map)
@@ -37,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Añadir evento al botón para reubicar el marcador
     document.getElementById('reset-marker').addEventListener('click', resetMarker);
 
+    
     // Mostrar ubicación del usuario sin centrar el mapa
     map.locate({setView: false, maxZoom: 4});
 
@@ -49,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         L.circle(e.latlng, radius).addTo(map);
     }
 
+        //Funcion de error
     function onLocationError(e) {
         showMessage('No pudimos obtener tu ubicación. Por favor, habilita la geolocalización y recarga la página.', 'error');
     }
