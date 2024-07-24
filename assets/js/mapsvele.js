@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //Funcion de error
     function onLocationError(e) {
-        showMessage('No pudimos obtener tu ubicación. Por favor, habilita la geolocalización y recarga la página.', 'error');
+        showMessage('No se pudo obtener la ubicación. Por favor, habilita la geolocalización', 'error');
     }
 
     map.on('locationfound', onLocationFound);
