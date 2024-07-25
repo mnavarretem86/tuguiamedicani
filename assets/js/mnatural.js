@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
-  
- */
-    // Añadir capa base por defecto
+     // Añadir capa base por defecto
     osmLayer.addTo(map);
 
 
